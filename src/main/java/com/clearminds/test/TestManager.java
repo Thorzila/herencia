@@ -10,12 +10,10 @@ public class TestManager {
 		try {
 			PersonaManager pm = new PersonaManager();
 			Persona persona = new Persona("Juan", "Manzano", 25);	
-			//Si utilizo pm.insertarPersona devuelve un null, porque la instancia de la interfaz es null
 			pm.insertarPersona(persona);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
 
 }
