@@ -14,7 +14,12 @@ public class PersonaManager implements ServicioPersona{
 	//Este método devuelve un null pointer porque la instancia de ServicioPersona es null
 	//Me vi obligado a implementar la interfaz para poder utilizar sus métodos y no obtener la excepción
 	public void insertarPersona(Persona persona){
-		serv.insertar(persona);
+		try {
+			ServicioPersonaArchivos srvArchivos = new ServicioPersonaArchivos();
+			srvArchivos.insertar(persona);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public boolean insertar(Persona persona) {
