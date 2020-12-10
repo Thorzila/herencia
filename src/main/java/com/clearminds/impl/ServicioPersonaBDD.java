@@ -5,7 +5,7 @@ import com.clearminds.model.Persona;
 
 public class ServicioPersonaBDD implements ServicioPersona {
 
-	public boolean insertar() {
+	public boolean insertar(Persona persona) {
 		System.out.println("Insertando persona en la bdd");
 		return true;
 	}

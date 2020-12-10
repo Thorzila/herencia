@@ -5,7 +5,7 @@ import com.clearminds.model.Persona;
 
 public class ServicioPersonaArchivos implements ServicioPersona{
 
-	public boolean insertar() {
+	public boolean insertar(Persona persona) {
 		System.out.println("Insertando persona en un archivo");
 		return true;
 	}
