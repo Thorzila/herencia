@@ -1,5 +1,6 @@
 package com.clearminds.test;
 
+import com.clearminds.exceptions.InstanceException;
 import com.clearminds.impl.PersonaManager;
 import com.clearminds.model.Persona;
 
@@ -11,8 +12,9 @@ public class TestManager {
 			PersonaManager pm = new PersonaManager();
 			Persona persona = new Persona("Juan", "Manzano", 25);	
 			pm.insertarPersona(persona);
-		} catch (Exception e) {
+		} catch (InstanceException e) {
 			e.printStackTrace();
+			e.getMessage();
 		}
 	}
 

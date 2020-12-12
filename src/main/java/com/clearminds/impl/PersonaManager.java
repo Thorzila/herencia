@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.Properties;
 
+import com.clearminds.exceptions.InstanceException;
 import com.clearminds.interfaces.ServicioPersona;
 import com.clearminds.model.Persona;
 
@@ -35,8 +36,13 @@ public class PersonaManager {
 		}
 	}
 	
-	public void insertarPersona(Persona persona){
-		srv.insertar(persona);
+	public void insertarPersona(Persona persona) throws InstanceException {
+		try {
+			srv.insertar(persona);			
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new InstanceException("Error al obtener una instancia de persona");
+		}
 	}	
 	
 }
